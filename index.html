@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jokenpô</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .choices {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #fff;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: #ffcc00;
+      transform: scale(1.1);
+    }
+
+    #result {
+      font-size: 22px;
+      margin-top: 15px;
+      min-height: 30px;
+    }
+
+    #score {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🪨📄✂️ Jokenpô</h1>
+  <div class="choices">
+    <button onclick="play('pedra')">🪨 Pedra</button>
+    <button onclick="play('papel')">📄 Papel</button>
+    <button onclick="play('tesoura')">✂️ Tesoura</button>
+  </div>
+  <div id="result"></div>
+  <div id="score">Você: 0 | Computador: 0</div>
+
+  <!-- Importa o script externo -->
+  <script src="script.js"></script>
+</body>
+</html>
